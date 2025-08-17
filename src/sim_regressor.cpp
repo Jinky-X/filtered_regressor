@@ -42,7 +42,7 @@ int main(int argc, char **argv)
     std::vector<Eigen::Vector7_1> e_vec;
 
     int use_analytic = 0;
-    nh.param<int>("use_analytic", use_analytic,0);  // 0: use pinocchio, 1: use analytic
+    nh.param<int>("use_analytic", use_analytic, 0);  // 0: use pinocchio, 1: use analytic
 
     std::cout << "use_analytic param: " << use_analytic << std::endl;
 
@@ -151,7 +151,6 @@ int main(int argc, char **argv)
         eps_vec.push_back((tau_filtered - Phif * W_hat).norm());
         if (t < 25.0 && t >= dt)
         {
-
             filter_params = filter_params + dt * ExtenY;
             filter_ExtenRegressor = filter_ExtenRegressor + dt * ExtenRegressor;
         }

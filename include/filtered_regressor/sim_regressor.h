@@ -34,17 +34,12 @@
 void pub_double(ros::Publisher &pub, double value);
 template <typename VectorType>
 void pub_double7(ros::Publisher &pub, const VectorType &value);
-Eigen::Matrix7_43 Base_Slotine_Panda_nof(const Eigen::Vector7_1 &q,
-                                         const Eigen::Vector7_1 &q_dot,
-                                         const Eigen::Vector7_1 &qr_dot,
-                                         const Eigen::Vector7_1 &qr_ddot);
-Eigen::Matrix7_64 Base_Slotine_Panda_pino(const Eigen::Vector7_1 &q,
-                                          const Eigen::Vector7_1 &q_dot,
-                                          const Eigen::Vector7_1 &qr_dot,
-                                          const Eigen::Vector7_1 &qr_ddot);
-Eigen::Matrix<double, 7, 64> filtered_regressor_pino(
-    const Eigen::Matrix<double, 7, 1> &q,
-    const Eigen::Matrix<double, 7, 1> &q_dot, const double kLambda,
-    const double sample_time);
+Eigen::Matrix7_43 Base_Slotine_Panda_nof(const Eigen::Vector7_1 &q, const Eigen::Vector7_1 &q_dot,
+                                         const Eigen::Vector7_1 &qr_dot, const Eigen::Vector7_1 &qr_ddot);
+Eigen::Matrix7_64 Base_Slotine_Panda_pino(const Eigen::Vector7_1 &q, const Eigen::Vector7_1 &q_dot,
+                                          const Eigen::Vector7_1 &qr_dot, const Eigen::Vector7_1 &qr_ddot);
+Eigen::Matrix<double, 7, 64> filtered_regressor_pino(const Eigen::Matrix<double, 7, 1> &q,
+                                                     const Eigen::Matrix<double, 7, 1> &q_dot, const double kLambda,
+                                                     const double sample_time);
 
-#endif // SIM_REGRESSOR_H
+#endif  // SIM_REGRESSOR_H
