@@ -322,7 +322,7 @@ Eigen::Matrix<double, 7, 64> compute_base_regressor_nof(const Eigen::Matrix<doub
         std::vector<int> empty_P_idx = {1,  2,  3,  11, 12, 13, 21, 22, 23, 31, 32,
                                         33, 41, 42, 43, 51, 52, 53, 61, 62, 63};
         // 读取文件
-        std::ifstream file(BASE_PWD "/test/P0_st.csv");
+        std::ifstream file(BASE_PWD "/data/P.csv");
         if (!file.is_open())
         {
             std::cerr << "Error opening P.csv file." << std::endl;
